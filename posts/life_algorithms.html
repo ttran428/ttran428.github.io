@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>How Algorithms Relate to Life</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Home</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../img/canoe.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>How Algorithms Relate to Life</h1>
+              <h2 class="subheading">Can they teach us anything?</h2>
+              <span class="meta">Posted
+                on September 24, 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            
+            <p>Can algorithms teach us anything about life? Is it more than just a computer science course that tells use to find n*log(n) algorithms for divide and conquer and create tables for dynamic programming? Let’s examine some popular programming techniques: divide and conquer, dynamic programming, greedy algorithms, linear programming, and streaming algorithms, NP-complete/reductions.</p>
+
+            <p>Divide and conquer. Divide and conquer is all about breaking into smaller subproblems that have a similar structure. Break things into smaller subproblems until they become easy to solve. There is something to be said about when you’re given a complex problem, break it into half. Solve the easier problems, then put them together. </p>
+
+            <p>The way Berkeley describes dynamic programming is that it is a “failed” attempt at divide and conquer, but you notice some subproblems are repeated. I think it teaches you that you shouldn’t learn things twice. Don’t relearn the lessons life teaches you, remember it the first time. Just like how you build from the bottom of the table that you store your results and build upon the past results, try not to repeat unnecessary work that you’ve already done. Keep notes on past processes. Automate things you know you will do a lot. There is no use in learning something if you’re just going to forget (well, that’s not entirely true…but you get the point). This is different from divide and conquer because divide and conquer teaches you how to break up problems, while dynamic programming teaches you to not repeat problems.</p>
+
+            <p>Greedy algorithms are an interesting different section. Maybe it’s better to be called greedy strategies. Greedy strategies just mean you see the data, and you make a decision, and you stick with it. You never backtrack. Once you make a decision, it’s final. In a sense, all algorithms are “greedy” as they end up choosing decisions based on the data, but greedy algorithms are really focused a lightweight simple system of choosing the next step to take. For example, Dwight’s greedy strategy for loyalty was “ Look, I’m all about loyalty. In fact, I feel like part of what I’m being paid for here is my loyalty. But if there were somewhere else that valued loyalty more highly, I’m going to wherever they value loyalty the most.” Dwight just chose the company which gives him the best offer (which is not actually true, since he stays with Dunder Mifflin forever, but it’s what he says). And the interesting thing about greedy strategies is they often don’t yield the optimal result (like divide and conquer and dynamic programming). Which makes sense, because you only have the data now. If you always change companies to whatever offers you the highest salary, you’re missing out on a lot of other factors and experiences that you would get at being at a company longer. But there are guarantees you can put on these strategies. Greedy strategies can often be lower bounded so you know that there is a worst case, and sometimes it can be proven to be optimal. And I think the most important part to remember is that greedy strategies is a strategy: it’s how to approach problems/life. There are different strategies as well, but like all strategies, it has it’s pros and cons. Pros: It’s lightweight and makes it easy to choose decisions. It simplifies your life. Cons: Sometimes, greedy is not always optimal. But it’s usually pretty good.</p>
+
+            <p>Linear programming. Oh, how does this apply to anything? Well, linear programming is the art of phrasing problems as maximizations with constraints that are linear. And although it seems like this is a big limitation having only linear constraints, you’d be surprised how many models it can fit. And once you can phrase it as a linear program, you just assume there’s a solver and it solves it for you. Sometimes in life, things seem very difficult. But if you can phrase and reduce the difficult problems to things that you know how to do, it becomes easy. So the challenge in life is not always doing the hard thing, but the challenge is in redefining and phrasing the problem. If you ever find something difficult, try changing your focus from solving it to defining it in terms you do know (or know something that could solve it).</p>
+
+            <p>I’ve already talked about streaming algorithms in my Boyer-Moore algorithm post. But let’s see it again. Sometimes you don’t need to thoroughly analyze a problem deeply to solve it. Maybe you only need one look through it to solve like streaming algorithms. Some things are simple, but complex if you look too hard. </p>
+
+            <p>And then we come to NP-complete problems and reductions. And the fact of the matter is, some problems in life are too hard to solve, only have unrealistic exponential runtimes, or there is a solution but no one knows if there is one. So what do you do if you encounter an impossible problem? You prove it is extremely difficult by reducing it to a known impossible problem. Which seems like a pretty valid excuse to not being able to do something. And that’s fine. Some problems are too difficult. And it’s up to you whether you want to work on these problems or something else.</p>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/theodorebear428/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Teddy Tran 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
