@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SWE at Freenome</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Home</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../img/purple_moon.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>SWE at Freenome</h1>
+              <h2 class="subheading">My (Almost) First Year at Freenome</h2>
+              <span class="meta">Posted
+                on February 8, 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+
+            <p>So recently, we got a reminder to update our LinkedIn profiles at Freenome since we are hiring like crazy and candidates often look at employee’s LinkedIn profiles. So I thought I’d do one better and write a blog post about it!</p>
+
+            <p>I’ve written 2 and 1/6th blog posts about Freenome (see <a href="portfolio_showcase.html">my intro to Freenome</a>, <a href="freenome.html">before my internship</a>, <a href="freenome2.html"> and after my internship</a>, but I haven’t wrote anything about Freenome as a full time engineer, and I’ve been here around 10 months now!</p>
+
+            <p>Looking back at my previous posts, I am quite happy to say that most of my previous observations about Freenome and my experience still ring true: the people are amazing and care about each other, I get to work on awesome projects as a new grad, and we still have the same mission of curing cancer! The one thing that has changed is that I would say that Freenome is not the early stage Series A startup that it was when I was an intern. We had our <a href="https://news.crunchbase.com/news/freenome-secures-270m-series-c-to-research-cancer-detecting-blood-tests/">Series C funding</a> a while ago, and while this definitely does not mean we are a stable company by any means, we are definitely more stable than we were when I was an intern. When I joined as an intern in June 2019, I was around the 85th employee. When I joined full time in April 2020, I was around the 125th employee. Now we have around 230 employees. The growth is quite fast, but it is also manageable fast growth. We aren’t hiring people just because we have the money or we can, but to fill specific gaps in our teams. I do have to be quite active about keeping up with new engineers though, or months can go by and suddenly there’s so many new engineers I haven’t seen (especially because of work-from-home). One of the biggest changes I’ve seen on engineering is that we now have technical product managers, whereas in the past engineering has been quite reluctant to have TPMs. They’ve been a huge improvement in our process, especially since with the creation of many new teams within engineering and also in the company in general, there becomes a bigger need for inter-team communication of requirements and deadlines. I definitely miss the small engineering team we once had, but I also love the growth and new team members! Experiencing different stages of growth at Freenome has been a lot of fun for me, and I don’t think it’s something I would have experienced if I didn’t join a startup (although I wouldn’t say Freenome is the only company I would have experienced this, I would say this is something startups go through in general).</p>
+
+            <p>As for my actual engineering work, when I joined, I continued working on my intern project, which turned into a full-fledged project with six engineers working on it. We built a medical records ingestion pipeline for our research data that conformed to FHIR standards (a popular healthcare specification). One of the problems before with our clinical data ingestion process was that it caused a lot of data inconsistency problems due to not having a standardized process. However, with our new pipeline, the data flows is a lot more traceable and reproducible, and we had minimal ingestion inconsistencies, which could all be traced back to their errors and fixed. As our pipeline worked now, most of our engineers moved from working on our research ingestion pipeline onto working on our production pipeline. Production code here means code that will touches HIPAA compliant data from people who will order our blood test, whereas research code means code that our researchers use that does not touch HIPAA compliant data (like study data we get from contract research organizations). I’ve been left in charge of medical records future ingestions, but as there is not so much active work that has to be done on it except when we have new study data to ingest. </p>
+
+            <p>Therefore, I’ve also been moving onto some of our production pipeline projects: I’m the tech lead on designing the web portal for healthcare providers to order and receive our blood tests, as well as generating the report after the binary prediction has been made (whether the patient has cancer or not). For those people who are not in biotech, it may seem like not such a complicated project (if we look at the big picture and strip it down, the user has to fill out a web form to order a test, and hit a button to receive the test when it’s ready. A lot of this can almost be auto generated by Django). The reason why this isn’t so simple is because we are dealing with HIPAA data. For any HIPAA compliance violation, the fine is $50k per patient (and there are a lot of patients we would like to reach…). Therefore, it becomes a lot more important that these external endpoints don’t hit a database storing all patient data. Our database that stores this data will also be used in the machine learning prediction pipeline to make the prediction, and it is also not a good design to have our prediction pipeline’s resources be hit every time there is a request from external users (The internal database should only be hit from the prediction pipeline requests, not from external users ordering tests). </p>
+
+            <p>Also, there are two ways that healthcare providers will be able to order our tests: Through the Web Portal or EHR (electronic health records) services that many hospitals already use. And while Web Portal is external facing, our EHR pipeline can only be accessed through a VPN tunnel, but they both have to converge to ingest the order information. This creates some more technical challenges, because these two pipelines should converge in one place to create order data (for maintainability, simplicity of not repeating code, etc.), but also we cannot just redirect the EHR service to the Web Portal or vice versa, since that would eliminate the whole security of the VPN tunnel for the EHR services. And lastly, creating an account to order Freenome tests is not the same as creating an account for social media for example. Not anyone can just create an account; there is a process hospitals and other healthcare providers will work with Freenome on to sign up to be able to order blood tests. These are just some of the challenges we face while building our production ordering pipeline that makes it not as simple as following the Django tutorial. :) It’s very cool to learn about these biotech and healthcare challenges in addition to normal software engineering practices, which is something I wanted to learn when joining a company that combines multiple fields.</p>
+
+            <p>I’ve been growing as an engineer rapidly, and I think one of the lessons I’ve learned quickly is that there are a lot more responsibilities to being an engineer than just writing code. There is also defining roadmaps, working with TPMs and the business team stakeholders on deadlines and requirements, communicating with engineering stakeholders of related projects, making sure your team’s work is well scoped, writing documentation on technical decisions for maintainability, and much more. I do not think I would have these opportunities if I didn’t join a startup.</p>
+
+            <p>Lastly, I wanted to speak about the cultural impact I’ve been able to have at Freenome. As I joined full time after Freenome was work-from-home because of COVID, I felt that there was a missing piece of interacting with your coworkers every day. You can’t really run into people in the hallways, coffee chats are not replaced with Zoom meetings that are just basically the same conversation of “How are you? Nothing has changed in your life in the last 4 months either? Nice catching up!” So I started Engineering’s board game Friday’s where we play games (and all engineers love playing games since we love maximizing efficiency and using logic) as well as Lightning Talks. Lightning Talks became a place for 5 speakers every month to talk about their hobbies or interests or anything that they wanted to talk about. The only exception was that they couldn’t talk about their work. I was a little bit worried about it at first that no one would have anything they wanted to talk about, but it turns out people do have a lot they want to talk about that these days they don’t get to talk about. We’ve had a lot of awesome topics, from calligraphy to the mysterious death of Jane Stanford to hieroglyphics and much more. It worked out so well, that it’s now expanded to a company wide event! I’ve also been able to lead our internship program last summer and help on hiring interns for next summer. Which is kinda crazy because sometimes I still feel like an intern.</p>
+
+            <p>I think the cultural impact I’ve been able to have at Freenome is one of the things I feel very grateful to have. When I found some possible cultural impact I wanted to have, I was encouraged to try it. Most engineers here don’t only do their engineering work, but also have small side cultural projects they pursue, whereas that is organizing Service Day so we can spend some time to give back to the community, work on our diversity and inclusion committee, or something else. And I think it would have been easy for management to say “Your job is to be an engineer and write code. This is the biggest way to actually help people is to get our cancer test out quicker. Stop wasting our engineers time by playing Skribbl”. But these cultural projects are what keeps our spirits up and improve the work environment atmosphere, which is important because this is a marathon, not a sprint. No one’s ever told me Freenome is the perfect place to work, because it isn’t. Perfection is the enemy of good. Perfection is also the enemy of improvement. And Freenome is a good place to work, and I love that we all work on making it a better place to work every day.</p>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/theodorebear428/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Teddy Tran 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
